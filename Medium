@@ -1,0 +1,101 @@
+1. Develop a Java program to get the temperature and print the following status of the weather
+according to the given temperature by using else if ladder statement.
+Temperature Weather
+T<=0 "Its very very cold"
+0<T<=10 "Its cold"
+10<T<=20 "Its cool out"
+20<T<=30 "Its warm"
+T>30 "Its hot"
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter temperature:");
+		Scanner sc = new Scanner(System.in);
+		int temp = sc.nextInt();
+		if(temp<=0)
+		{
+		    System.out.println("Its very very cold");
+		}
+		else if(temp>0 && temp<=10)
+		{
+		    System.out.println("Its cold");
+		}
+		else if(temp>10 && temp<=20)
+		{
+		    System.out.println("Its cool out");
+		}
+		else if(temp>20 && temp<=30)
+		{
+		    System.out.println("Its warm");
+		}
+		else if(temp>30)
+		{
+		    System.out.println("Its hot");
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------
+
+
+2. Check whether an alphabet is vowel or consonant using if..else statement
+public class VowelConsonant
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter Character:");
+		Scanner sc = new Scanner(System.in);
+		char ch = sc.next().charAt(0);
+		if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||
+		ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+		{
+		    System.out.println("An alphabet is vowel");
+		}
+		else
+		{
+		    System.out.println("An alphabet is consonant");
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------------
+
+3. Write a Java program that accepts a student&#39;s mark and displays the
+corresponding grade based on the following criteria using an else-if ladder:
+If the average of marks is >= 80 then prints Grade ‘A’
+If the average is <80 and >=60 then prints Grade ‘B’
+If the average is <60 and >=40 then prints Grade ‘C’else prints Grade ‘D’
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.print("Enter your Marks:");
+		Scanner sc = new Scanner(System.in);
+		float mark = sc.nextFloat();
+		if(mark>=80)
+		{
+		    System.out.println("Grade 'A'");
+		}
+		else if(mark>80 && mark<=60)
+		{
+		    System.out.println("Grade 'B'");
+		}
+		else if(mark>60 && mark<=40)
+		{
+		    System.out.println("Grade 'C'");
+		}
+		else
+		{
+		    System.out.println("Grade 'D'");
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------
+
+
