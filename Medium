@@ -1,101 +1,212 @@
-1. Develop a Java program to get the temperature and print the following status of the weather
-according to the given temperature by using else if ladder statement.
-Temperature Weather
-T<=0 "Its very very cold"
-0<T<=10 "Its cold"
-10<T<=20 "Its cool out"
-20<T<=30 "Its warm"
-T>30 "Its hot"
+5. Write a Java program to determine eligibility for admission to a professional course based on the
+following criteria: 
+Eligibility Criteria : Marks in Maths>=65 and Marks in Phy>=55 and Marks in Chem>=50 and Total in
+all three subject>=190 or Total in Maths and Physics>=140 
+Sample I/P:
+Input the marks obtained in Physics :65
+Input the marks obtained in Chemistry :51
+Input the marks obtained in Mathematics :72
+Total marks of Maths, Physics and Chemistry : 188
+
+Total marks of Maths and Physics : 137
+Sample O/P:
+The candidate is not eligible for admission.
+
 
 import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-		System.out.println("Enter temperature:");
-		Scanner sc = new Scanner(System.in);
-		int temp = sc.nextInt();
-		if(temp<=0)
-		{
-		    System.out.println("Its very very cold");
-		}
-		else if(temp>0 && temp<=10)
-		{
-		    System.out.println("Its cold");
-		}
-		else if(temp>10 && temp<=20)
-		{
-		    System.out.println("Its cool out");
-		}
-		else if(temp>20 && temp<=30)
-		{
-		    System.out.println("Its warm");
-		}
-		else if(temp>30)
-		{
-		    System.out.println("Its hot");
-		}
-	}
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Input the marks obtained in Physics:");
+    int Physics = sc.nextInt();
+    System.out.print("Input the marks obtained in Chemistry:");
+    int Chemistry = sc.nextInt();
+    System.out.print("Input the marks obtained in Maths:");
+    int Maths = sc.nextInt();
+    int total_three = Physics+Chemistry+Maths;
+    int total_two = Maths+Physics;
+    System.out.println("Total marks of Maths,Physics and Chemistry:"+total_three);
+    System.out.println("Total marks of Maths and Physics:"+total_two);
+    if((Maths>=65 && Physics>=55 && Chemistry>=50 && total_three>=190) || total_two>=140)
+    {
+      System.out.println("The candidate is eligible for admission");
+    }
+    else{
+      System.out.println("The candidate is not eligible for admission");
+    }
+
+  }
+    
 }
 
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
 
 
-2. Check whether an alphabet is vowel or consonant using if..else statement
-public class VowelConsonant
+6. Write a Java Program to print hollow Rectangle using star(*) in C
+Sample Test case:
+Enter number of rows: 4
+Enter number of columns: 7
+*******
+*     *
+*     *
+*******
+
 
 import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-		System.out.println("Enter Character:");
-		Scanner sc = new Scanner(System.in);
-		char ch = sc.next().charAt(0);
-		if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||
-		ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
-		{
-		    System.out.println("An alphabet is vowel");
-		}
-		else
-		{
-		    System.out.println("An alphabet is consonant");
-		}
-	}
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter number of rows:");
+    int row = sc.nextInt();
+    System.out.print("Enter number of columns:");
+    int col = sc.nextInt();
+    for(int i=0;i<row;i++)
+    {
+      for(int j=0;j<col;j++)
+      {
+        if(i==row-1||i==0||j==col-1||j==0)
+        {
+          System.out.print("*");
+        }
+        else{
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+    
 }
 
---------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
-3. Write a Java program that accepts a student&#39;s mark and displays the
-corresponding grade based on the following criteria using an else-if ladder:
-If the average of marks is >= 80 then prints Grade ‘A’
-If the average is <80 and >=60 then prints Grade ‘B’
-If the average is <60 and >=40 then prints Grade ‘C’else prints Grade ‘D’
+
+7. Write a Java program that takes a message typed by the user and counts the number of
+words in it.
+Enter your chat message: Java is a special language
+Word Count: 5
+
 
 import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-		System.out.print("Enter your Marks:");
-		Scanner sc = new Scanner(System.in);
-		float mark = sc.nextFloat();
-		if(mark>=80)
-		{
-		    System.out.println("Grade 'A'");
-		}
-		else if(mark>80 && mark<=60)
-		{
-		    System.out.println("Grade 'B'");
-		}
-		else if(mark>60 && mark<=40)
-		{
-		    System.out.println("Grade 'C'");
-		}
-		else
-		{
-		    System.out.println("Grade 'D'");
-		}
-	}
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter your chat message:");
+    String message = sc.nextLine();
+    String [] words = message.trim().split("\\s+");
+    int count = words.length;
+    System.out.println("Word Count:"+count);
+  }
+    
 }
 
-------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
 
+8. Write a C program to generate the Fibonacci series up to N terms.
+
+
+import java.util.*;
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter value of n:");
+    int n = sc.nextInt();
+    int a=0,b=1,c;
+    for(int i=0;i<n;i++)
+    {
+      System.out.print(a+" ");
+      c=a+b;
+      a=b;
+      b=c;
+    }
+  }
+    
+}
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+9 Write a Java program to search for an element in an array.
+
+import java.util.*;
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter number of elements:");
+    int n = sc.nextInt();
+    int[] arr = new int[n];
+    System.out.print("Enter value of array:");
+    for(int i=0;i<n;i++)
+    {
+      arr[i]=sc.nextInt();
+    }
+    System.out.print("Enter element to search:");
+    int search = sc.nextInt();
+    int found = 0;
+    for(int i=0;i<n;i++)
+    {
+      if(search==arr[i])
+      {
+        found = 1;
+        break;
+      }
+      else{
+        found = 0;
+      }
+    }
+    if(found==1)
+    {
+      System.out.println("Element Found");
+    }
+    else
+    {
+      System.out.println("Element not Found");
+    }
+  }
+    
+}
+
+-------------------------------------------------------------------------------------------------------
+
+10 Write a Java program to count the number of vowels in a string.
+
+
+import java.util.*;
+
+public class Main {
+  public static void main(String[]args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter String:");
+    String s = sc.nextLine();
+    int count=0;
+    for(int i=0;i<s.length();i++)
+    {
+      if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||
+      s.charAt(i)=='o'||s.charAt(i)=='u'||s.charAt(i)=='A'||
+      s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||
+      s.charAt(i)=='u')
+      {
+        count++;
+      }
+    }
+    System.out.println("The number of vowels in a string:"+count);
+    
+  }
+    
+}
+
+-----------------------------------------------------------------------------------------------------
